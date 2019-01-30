@@ -89,7 +89,7 @@ class ViewController: UIViewController {
     
     func gameResult(player: Int, playerName: String) {
         if player <= 0 {
-            let alert = UIAlertController(title: "Game Result", message: "Congratulations \(playerName) won!", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Game Result", message: "\(playerName) LOSES!", preferredStyle: .alert)
             let cancel = UIAlertAction(title: "Re-Start", style: .cancel, handler: nil)
             alert.addAction(cancel)
             self.present(alert, animated: true, completion: nil)
