@@ -174,21 +174,34 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func reset () {
+        player1Score = 20
+        player2Score = 20
+        player3Score = 20
+        player4Score = 20
+        player5Score = 20
+        player6Score = 20
+        player7Score = 20
+        player8Score = 20
+        gameStarted = false
+        gameResult.isHidden = true
+        HistoryViewController.history = ["Player1":0, "Player2":0, "Player3":0, "Player4":0, "Player5":0, "Player6":0, "Player7":0, "Player8":0]
+        player1.text = String(player1Score)
+        player2.text = String(player2Score)
+        player3.text = String(player3Score)
+        player4.text = String(player4Score)
+        player5.text = String(player5Score)
+        player6.text = String(player6Score)
+        player7.text = String(player7Score)
+        player8.text = String(player8Score)
+    }
 
     func gameResult(player: Int, playerName: String) {
         if player <= 0 {
             gameResult.isHidden = false
-            gameResult.text = "\(playerName) LOSES!"
-            player1Score = 20
-            player2Score = 20
-            player3Score = 20
-            player4Score = 20
-            player5Score = 20
-            player6Score = 20
-            player7Score = 20
-            player8Score = 20
-        HistoryViewController.addToHistory(newHistory:playerName)
-            gameStarted = false
+            gameResult.text = "Game Over! \(playerName) LOSES!"
+            HistoryViewController.addToHistory(newHistory:playerName)
         }
         player1.text = String(player1Score)
         player2.text = String(player2Score)

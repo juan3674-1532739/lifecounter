@@ -384,25 +384,18 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player X LOSES!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVF-6g-nUB">
-                                <rect key="frame" x="145" y="668.66666666666663" width="124" height="20.333333333333371"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2W7-8S-zgF">
-                                <rect key="frame" x="18" y="104" width="203.66666666666666" height="48"/>
+                                <rect key="frame" x="18" y="104" width="257.33333333333331" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBd-Nb-lme">
-                                        <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="91.333333333333329" height="48"/>
                                         <state key="normal" title="View History"/>
                                         <connections>
                                             <segue destination="S0A-1P-Deb" kind="show" id="MDb-3v-J8l"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="3cy-A4-GTC">
-                                        <rect key="frame" x="101.66666666666669" y="0.0" width="102" height="48"/>
+                                        <rect key="frame" x="99.333333333333314" y="0.0" width="158" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hq7-6n-qIV">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="48"/>
@@ -411,8 +404,15 @@
                                                     <action selector="addPlayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="agI-hA-pGZ"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bL4-Hn-59j">
+                                                <rect key="frame" x="47.000000000000014" y="0.0" width="39" height="48"/>
+                                                <state key="normal" title="Reset"/>
+                                                <connections>
+                                                    <action selector="reset" destination="BYZ-38-t0r" eventType="touchUpInside" id="0vL-fd-DfR"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZ5-Iy-yam">
-                                                <rect key="frame" x="46.999999999999986" y="0.0" width="55" height="48"/>
+                                                <rect key="frame" x="103" y="0.0" width="55" height="48"/>
                                                 <state key="normal" title="Remove"/>
                                                 <connections>
                                                     <action selector="removePlayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LD6-a5-ybf"/>
@@ -422,12 +422,28 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over! Player X LOSES!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVF-6g-nUB">
+                                <rect key="frame" x="77" y="666" width="220" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="g1m-NT-gxq"/>
+                                    <constraint firstAttribute="height" constant="21" id="xMZ-zt-Hkz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="J9o-kE-quD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56.333333333333343" id="EFb-6v-J0U"/>
+                            <constraint firstItem="UVF-6g-nUB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Eny-uW-4TL"/>
                             <constraint firstItem="2W7-8S-zgF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="Ijk-Yg-hV6"/>
                             <constraint firstItem="2W7-8S-zgF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Tfn-Q3-O5f"/>
+                            <constraint firstItem="UVF-6g-nUB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Uoy-ZI-YeL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UVF-6g-nUB" secondAttribute="bottom" constant="91" id="W0W-xy-LQq"/>
+                            <constraint firstItem="UVF-6g-nUB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WcN-8v-8jX"/>
+                            <constraint firstItem="UVF-6g-nUB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fCv-ch-D17"/>
+                            <constraint firstItem="UVF-6g-nUB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hIZ-J1-cjI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="J9o-kE-quD" secondAttribute="bottom" constant="450" id="jSO-4u-mOc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J9o-kE-quD" secondAttribute="trailing" constant="58" id="xYV-5G-iKr"/>
                             <constraint firstItem="J9o-kE-quD" firstAttribute="top" secondItem="2W7-8S-zgF" secondAttribute="bottom" constant="32" id="z4r-Gy-mhu"/>
@@ -473,7 +489,6 @@
                                     <constraint firstAttribute="width" constant="240" id="0tz-FN-7en"/>
                                     <constraint firstAttribute="height" constant="128" id="5sx-RF-nhe"/>
                                 </constraints>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

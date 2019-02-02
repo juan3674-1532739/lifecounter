@@ -21,9 +21,6 @@ class HistoryViewController: UIViewController {
         history[newHistory] = history[newHistory]! + 1
     }
 
-    class func reset () {
-        HistoryViewController.history = ["Player1":0, "Player2":0, "Player3":0, "Player4":0, "Player5":0, "Player6":0, "Player7":0, "Player8":0]
-    }
     override func viewDidAppear(_ animated: Bool) {
         historyView.text = ""
         for (players, score) in HistoryViewController.history {
