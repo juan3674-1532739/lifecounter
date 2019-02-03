@@ -150,27 +150,35 @@ class ViewController: UIViewController {
             if (sender.tag == 3) {
                 player1Score += Int(str)!
                 gameResult(player: player1Score, playerName: "Player1")
+                sender.text = ""
             } else if (sender.tag == 6) {
                 player2Score += Int(str)!
                 gameResult(player: player2Score, playerName: "Player2")
+                sender.text = ""
             } else if (sender.tag == 9) {
                 player3Score += Int(str)!
                 gameResult(player: player3Score, playerName: "Player3")
+                sender.text = ""
             } else if (sender.tag == 12) {
                 player4Score += Int(str)!
                 gameResult(player: player4Score, playerName: "Player4")
+                sender.text = ""
             } else if (sender.tag == 15) {
                 player5Score += Int(str)!
                 gameResult(player: player5Score, playerName: "Player5")
+                sender.text = ""
             } else if (sender.tag == 18) {
                 player6Score += Int(str)!
                 gameResult(player: player6Score, playerName: "Player6")
+                sender.text = ""
             } else if (sender.tag == 21) {
                 player7Score += Int(str)!
                 gameResult(player: player7Score, playerName: "Player7")
+                sender.text = ""
             } else if (sender.tag == 24) {
                 player8Score += Int(str)!
                 gameResult(player: player8Score, playerName: "Player8")
+                sender.text = ""
             }
         }
     }
